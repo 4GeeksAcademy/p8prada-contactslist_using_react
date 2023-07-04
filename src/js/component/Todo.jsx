@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const NO_TODO_TEXT = "No tasks..."
 
@@ -11,14 +12,18 @@ export default function Todo (props) {
 
 
     return (
-        <div className="toDo d-flex justify-content-between"
-        onMouseEnter={() => setShowDelete(true)}
-        onMouseLeave={() => setShowDelete(false)}
-        >
-            <p className='task'>{todo}</p>
+        
+            <div className="toDo d-flex justify-content-between"
+            onMouseEnter={() => setShowDelete(true)}
+            onMouseLeave={() => setShowDelete(false)}
+            >
+                <Link to={`/todo/${index}`}>
+                    <p className="task">{todo}</p>
+                </Link>
 
-            
-            {(!isNoTodoText && showDelete) && (<p className='delete' onClick={() => remove(index)}>X</p>)}
+                {(!isNoTodoText && showDelete) && (<p className='delete' onClick={() => remove(index)}>X</p>)}
 
-        </div>
+
+            </div>
+        
     )}

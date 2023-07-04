@@ -37,6 +37,11 @@ input{
     border-top-width: 0;
 }
 
+.task{color: lightslategray;}
+.task:hover{color: lightcoral;}
+
+a:link { text-decoration: none; }
+
 .delete{
     margin: 0;
     display: flex;
@@ -74,4 +79,18 @@ input{
       0 20px 1px -9px rgba(0,0,0,0.15);
       /* Padding for demo purposes */
       
+  }
+
+  .todoPage{
+    padding: 30px;
+    text-align: center;
+    padding: 10px;
+    font-size: 80px;
+    color: lightcoral;
+    font-weight: lighter;
+  }
+
+  .back{
+    padding: 30px;
+    text-align: center;
   }

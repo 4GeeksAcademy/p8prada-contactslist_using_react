@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import Todo, { NO_TODO_TEXT } from "./Todo.jsx";
 
+import { Context } from '../Context.jsx';
 
 export default function TodoContainer() {
 
     const [userInput, setUserInput] = useState("");
-    const [taskList, setTaskList] = useState([]);
+    const { taskList, setTaskList } = useContext(Context);
 
     // Store the user input (text)
     const onChangeHandler = (e) => setUserInput(e.target.value);
