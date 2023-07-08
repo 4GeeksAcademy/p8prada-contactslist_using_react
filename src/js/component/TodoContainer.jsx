@@ -1,7 +1,7 @@
-import React, {useContext, useState} from "react";
-import Todo, { NO_TODO_TEXT } from "./Todo.jsx";
+// import React, {useContext, useState} from "react";
+// import Todo, { NO_TODO_TEXT } from "./Todo.jsx";
 
-import { Context } from '../Context.jsx';
+// import { Context } from '../context/Context.jsx';
 
 export default function TodoContainer() {
 

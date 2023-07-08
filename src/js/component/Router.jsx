@@ -1,24 +1,25 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from './home.jsx';
-import TodoPage from './TodoPage.jsx';
-import ContextProvider from '../Context.jsx';
+import ContactListPage from '../ConctactListPage.jsx';
+
+// import Home from './home.jsx';
+// import TodoPage from './TodoPage.jsx';
+import ContextProvider from '../context/Provider.jsx';
 
 
 export default function Router() {
     return (
-        <BrowserRouter>
-            <Switch>
-                <ContextProvider>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route exact path="/todo/:index">
-                        <TodoPage />
-                    </Route>
-                </ContextProvider>
-            </Switch>
-        </BrowserRouter>
+            <BrowserRouter>
+                    <ContextProvider>
+
+                    {/* <ContactListPage/> */}
+                    <Routes>
+                        <Route exact path="/" element={<ContactListPage />} />
+                        
+                        <Route exact path="*" element={<h1>NOT FOUND!</h1>} />
+                        </Routes>
+                    </ContextProvider>
+            </BrowserRouter>
     )
 }

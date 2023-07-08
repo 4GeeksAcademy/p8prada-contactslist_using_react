@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import { useParams, Link } from 'react-router-dom'
+// import React, { useContext } from 'react';
+// import { useParams, Link } from 'react-router-dom'
 
-import { Context } from '../Context.jsx'
+// import { Context } from '../context/Context.jsx'
 
 export default function TodoPage() {
 
